@@ -1,1 +1,3 @@
-Sitemap: http://index.html/sitemap.xml
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
