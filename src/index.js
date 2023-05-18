@@ -14,13 +14,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <Provider store={store}>
-          <HashRouter>
+          <BrowserRouter>
               <Routes>
                   <Route path="/terms_and_conditions" element={<TermsOfUse />} />
                   <Route path="/privacy_policy" element={<PrivacyPolicy />} />
                   <Route path="/" element={<App />}/>
               </Routes>
-          </HashRouter>
+          </BrowserRouter>
       </Provider>
   </React.StrictMode>
 );
