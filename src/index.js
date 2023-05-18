@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import "./i18n"
 import {store} from './store/store'
 import {Provider} from "react-redux";
-import {HashRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 import TermsOfUse from "./terms/terms_of_use";
 import PrivacyPolicy from "./terms/privacy_policy";
 
@@ -16,12 +16,11 @@ root.render(
       <Provider store={store}>
           <HashRouter>
               <Routes>
+                  <Route path="/terms_and_conditions" element={<TermsOfUse />} />
+                  <Route path="/privacy_policy" element={<PrivacyPolicy />} />
                   <Route path="/" element={<App />}/>
-                  <Route path="terms_and_conditions" element={<TermsOfUse />} />
-                  <Route path="privacy_policy" element={<PrivacyPolicy />} />
               </Routes>
           </HashRouter>
-        {/*<App />*/}
       </Provider>
   </React.StrictMode>
 );

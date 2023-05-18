@@ -20,7 +20,7 @@ import themeDark from "../../themes/themeDark";
 
 function TermsOfUse() {
     const themeUsed = useSelector(selectTheme);
-    const [language, setLanguage] = React.useState('en');
+    const [language, setLanguage] = React.useState('es');
     const dispatch = useDispatch();
     const {t, i18n} = useTranslation();
 

@@ -95,7 +95,7 @@ export default function MiniDrawer() {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const { t, i18n } = useTranslation();
-    const [language, setLanguage] = React.useState('en');
+    const [language, setLanguage] = React.useState('es');
     const themeUsed = useSelector(selectTheme);
     const dispatch = useDispatch();
 
@@ -254,8 +254,8 @@ export default function MiniDrawer() {
                                     autoWidth
                                     label={t('language')}
                                 >
-                                    <MenuItem value={"en"}>English</MenuItem>
                                     <MenuItem value={"es"}>Español</MenuItem>
+                                    <MenuItem value={"en"}>English</MenuItem>
                                 </Select>
                             </FormControl>:null}
                         </ListItemButton>
