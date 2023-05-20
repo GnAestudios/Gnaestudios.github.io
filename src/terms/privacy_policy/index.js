@@ -3,7 +3,18 @@ import React from "react";
 
 import {useDispatch, useSelector} from 'react-redux'
 import {dark, light, selectTheme} from "../../store/reducer/themeReducer";
-import {AppBar, Box, Container, Link, Typography, ThemeProvider} from "@mui/material";
+import {
+    AppBar,
+    Box,
+    Container,
+    Link,
+    Typography,
+    ThemeProvider,
+    InputLabel,
+    Select,
+    MenuItem,
+    FormControl
+} from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import {ArrowBack, DarkMode, LightMode} from "@mui/icons-material";
@@ -64,6 +75,20 @@ function PrivacyPolicy() {
                 <Box component="main" sx={{flexGrow: 1, p: 3}}>
                     <main>
                         <section>
+                            <FormControl>
+                                <InputLabel id="language_input">{t('language')}</InputLabel>
+                                <Select
+                                    labelId="language_input_label"
+                                    id="language_input_label_select"
+                                    value={language}
+                                    onChange={changeLanguageHandler}
+                                    autoWidth
+                                    label={t('language')}
+                                >
+                                    <MenuItem value={"es"}>Español</MenuItem>
+                                    <MenuItem value={"en"}>English</MenuItem>
+                                </Select>
+                            </FormControl>
                             <Container>
                                 <Typography variant="h3" align="center">PRIVACY NOTICE</Typography>
                                 <Typography variant="h6" align="center">Last updated May 3, 2023</Typography>

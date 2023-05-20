@@ -6,8 +6,8 @@ import {dark, light, selectTheme} from "../../store/reducer/themeReducer";
 import {
     AppBar,
     Box,
-    Container,
-    Link,
+    Container, FormControl, InputLabel,
+    Link, MenuItem, Select,
     ThemeProvider,
     Typography
 } from "@mui/material";
@@ -70,6 +70,20 @@ function TermsOfUse() {
                 <Box component="main" sx={{flexGrow: 1, p: 3}}>
                     <main>
                         <section>
+                            <FormControl>
+                                <InputLabel id="language_input">{t('language')}</InputLabel>
+                                <Select
+                                    labelId="language_input_label"
+                                    id="language_input_label_select"
+                                    value={language}
+                                    onChange={changeLanguageHandler}
+                                    autoWidth
+                                    label={t('language')}
+                                >
+                                    <MenuItem value={"es"}>Español</MenuItem>
+                                    <MenuItem value={"en"}>English</MenuItem>
+                                </Select>
+                            </FormControl>
                             <Container>
                                 <Typography variant="h3" align="center">TERMS OF USE</Typography>
                                 <Typography variant="h6" align="center">Last updated May 3, 2023</Typography>
